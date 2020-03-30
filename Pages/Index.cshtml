@@ -6,6 +6,14 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <div class="testwidth">Hello</div>
+    <div id="info" class="testwidth">Hello</div>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<script>
+    var testElement = document.getElementById('info');
+    testElement.innerHTML = window.innerWidth;
+
+    window.onresize = function(e) {
+        testElement.innerHTML = window.innerWidth;
+    }
+</script>
